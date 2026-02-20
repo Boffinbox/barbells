@@ -1,5 +1,6 @@
 import { defineConfig, type ServerOptions } from 'vite'
 import react from '@vitejs/plugin-react'
+import { tanstackRouter } from '@tanstack/router-plugin/vite'
 
 let server: ServerOptions =
 {
@@ -15,6 +16,9 @@ let server: ServerOptions =
 
 // https://vite.dev/config/
 export default defineConfig({
-    plugins: [react()],
+    plugins: [
+        tanstackRouter({ target: 'react', autoCodeSplitting: true }),
+        react()
+    ],
     server
 })
