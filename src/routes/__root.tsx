@@ -1,9 +1,23 @@
 import { createRootRoute, Outlet } from '@tanstack/react-router'
 import { TanStackRouterDevtools } from '@tanstack/react-router-devtools'
 import DarkModeToggle from '../components/DarkModeToggle';
+import { CssVarsProvider, extendTheme } from '@mui/joy';
 
 export const Route = createRootRoute({
     component: App
+})
+
+const mdcTheme = extendTheme({
+    // The component identifier always start with `Joy${ComponentName}`.
+    components: {
+        JoyInput: {
+            styleOverrides: {
+                root: {
+                    borderRadius: "6px"
+                }
+            }
+        }
+    }
 })
 
 function App()
@@ -39,9 +53,12 @@ function App()
 
     return (
         <>
-            <DarkModeToggle />
-            <Outlet />
-            <TanStackRouterDevtools />
+
+            <CssVarsProvider theme={mdcTheme}>
+                <DarkModeToggle />
+                <Outlet />
+                <TanStackRouterDevtools />
+            </CssVarsProvider>
         </>
     )
 }

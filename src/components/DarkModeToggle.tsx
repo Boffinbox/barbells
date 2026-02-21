@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { MoonIcon } from './MoonIcon';
 import { SunIcon } from './SunIcon';
+import { useColorScheme } from '@mui/joy';
 
 function DarkModeToggle()
 {
@@ -11,6 +12,7 @@ function DarkModeToggle()
     }
 
     const [theme, setTheme] = useState(storedTheme);
+    const { mode, setMode } = useColorScheme();
     localStorage.setItem('theme', theme)
 
     const [isHover, setIsHover] = useState(false);
@@ -30,6 +32,7 @@ function DarkModeToggle()
         document.documentElement.setAttribute('data-bs-theme', newTheme);
         localStorage.setItem('theme', theme)
         setTheme(newTheme);
+        setMode(newTheme)
     };
 
     const buttonContainer = {
