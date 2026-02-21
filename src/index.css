@@ -1,0 +1,86 @@
+html {
+    font-size: 1rem;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+}
+
+hr {
+    opacity: 100%;
+}
+
+li {
+    margin-left: 10px
+}
+
+li a.homeLink {
+    position: relative;
+    left: 10px;
+}
+
+li a.homeLink:hover {
+    position: relative;
+    left: 10.8px;
+}
+
+li span.comingSoon {
+    position: relative;
+    left: 10px;
+}
+
+/* deals with scroll-to-top logic */
+div.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.scroll-container {
+    margin: auto;
+    max-height: 100%;
+    overflow: auto;
+    max-width: 1920px;
+}
+
+div.buffer {
+    flex-grow: 1;
+    min-height: 0;
+    /* background-color: lightpink; */
+}
+
+div.buttons {
+    min-width: 150px;
+    max-width: 240px;
+}
+
+.webLink {
+    background-color: #8888ff;
+    border-color: #8888ff;
+}
+
+.webLink:hover {
+    background-color: #4444ff;
+}
+
+.gitLink {
+    background-color: grey;
+    border-color: grey;
+}
+
+.gitLink:hover {
+    background-color: #4444ff;
+}
+
+.disabled {
+    color: #8888ff;
+}
+
+code {
+    font-family: monospace;
+    background-color: #404040;
+    padding: 2px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    color: white
+}
