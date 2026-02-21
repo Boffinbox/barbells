@@ -24,7 +24,8 @@ function RouteComponent()
                         <div>
                             Want to move up a weight for your progressive overloading, but don't know what your next possible increment is with your current plates? Add your weight plate details below, and we will show you your options as you add them.
                         </div>
-                        <div>
+                        <div className='my-2' />
+                        <div className='mx-auto'>
                             <BPCCalc />
                         </div>
                     </Stack>
